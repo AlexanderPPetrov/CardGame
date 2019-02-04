@@ -1,4 +1,4 @@
 export default {
-  getMovieById: state => id =>
-    state.movies.find(movie => movie.id === id),
+  getCardById: state => id =>
+    state.cards.find(card => card.id === id),
 };

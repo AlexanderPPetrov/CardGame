@@ -7,11 +7,36 @@ import getters from './getters';
 Vue.use(Vuex);
 
 const state = {
-  movies: [],
-  currentPage: 1,
-  totalResults: 0,
+  cards: [
+    {
+      id: 0,
+      image: 'hat.png',
+      title: 'Шапка',
+      type: 'hat',
+    },
+    {
+      id: 1,
+      image: 'boots.png',
+      title: 'Обувки',
+      type: 'boots',
+    },
+    {
+      id: 2,
+      image: 'scarf.png',
+      title: 'Шал',
+      type: 'scarf',
+    },
+    {
+      id: 3,
+      image: 'sweater.png',
+      title: 'Пуловер',
+      type: 'sweater',
+    },
+  ],
   isLoading: false,
-  resultType: 'movie',
+  activeCard: {},
+  matchedCards: [],
+  openedCards: []
 };
 
 const store = new Vuex.Store({
