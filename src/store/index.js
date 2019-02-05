@@ -34,9 +34,7 @@ const state = {
     },
   ],
   isLoading: false,
-  activeCard: {},
   matchedCards: [],
-  openedCards: []
 };
 
 const store = new Vuex.Store({

@@ -21,9 +21,6 @@ export default {
     const cardsResult = _.shuffle([...clonedCards, ...cards]);
     state.cards = cardsResult;
   },
-  [mutations.ADD_OPENED_CARD](state, card) {
-    state.openedCards.push(card);
-  },
   [mutations.ADD_MATCHED_CARD](state, card) {
     state.matchedCards.push(card);
   },
