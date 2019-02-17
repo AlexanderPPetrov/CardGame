@@ -4,9 +4,9 @@
   "games": [
     {
       "id": "1",
-      "title": 'Моите Дрехи',
-      "image": 'https://res.cloudinary.com/mateassets/image/upload/v1550400291/clothes_game_icon_ndr4zp.jpg',
-      "url": 'http://fourseasonsclothes.herokuapp.com'
+      "title": "Моите Дрехи",
+      "image": "https://res.cloudinary.com/mateassets/image/upload/v1550400291/clothes_game_icon_ndr4zp.jpg",
+      "url": "http://fourseasonsclothes.herokuapp.com"
     }
   ]
 }
