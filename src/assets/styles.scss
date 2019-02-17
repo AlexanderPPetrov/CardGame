@@ -4,8 +4,25 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import "~bootstrap/scss/bootstrap";
 @import "./_card";
+@import "./_modal";
+@import "./_buttons";
 @import "~font-awesome/scss/font-awesome";
 @import "./components";
 html,body{
   height:100%;
+}
+
+body {
+  background-image: url(/static/img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+}
+
+.gameOffset {
+  //transform: translate3d(-100%, 0, 0);
+  //overflow: hidden;
+  //opacity: 0;
+  //backface-visibility: hidden;
 }

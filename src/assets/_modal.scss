@@ -1,0 +1,30 @@
+.modal-footer {
+  justify-content: center;
+}
+.modal-title {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.modal-backdrop {
+
+}
+
+.modal-body {
+  padding: 2rem 1rem;
+}
+
+.modal-header {
+  border-bottom-color: transparent;
+}
+.modal-content {
+  border-radius: 0.6rem;
+  background: #382d58; /* Old browsers */
+  background: -moz-linear-gradient(top, #382d58 0%, #623451 41%, #aa4160 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #382d58 0%,#623451 41%,#aa4160 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #382d58 0%,#623451 41%,#aa4160 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#382d58', endColorstr='#aa4160',GradientType=0 ); /* IE6-9 */
+}
+
+.modal-footer {
+  border-top-color: rgba(255,255,255,0.1);
+}

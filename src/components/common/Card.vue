@@ -1,13 +1,16 @@
 <template>
-  <div v-on:click="flipCard($event)" class="card-container js-card col-4 col-sm-3 my-3"
+  <div v-on:click="flipCard($event)" class="card-container js-card col-4 col-sm-3 my-1"
        :class="{ switched: !card.isOpened }">
     <div class="card-wrapper">
-      <div class="card-side d-flex align-items-center justify-content-center" :class="{ active: card.isOpened }">
-        <img :src="getCardFront" class="img-fluid"/>
-        <img :src="getImage" class="card-image"/>
+      <div class="card-side d-flex align-items-center justify-content-center"
+           :class="{ active: card.isOpened, matched: card.isMatched }">
+        <img :src="getCardFront" class="img-fluid vh-image"/>
+        <img :src="getDisabledOverlay" class="card-image vh-image img-fluid card-disabled-overlay"/>
+        <img :src="getImage" class="card-image img-fluid vh-image card-asset"/>
+        <span class="card-title">{{card.title}}</span>
       </div>
-      <div class="card-side card-side-back" :class="{ active: !card.isOpened }">
-        <img :src="getCardBack" class="img-fluid"/>
+      <div class="card-side card-side-back d-flex align-items-center justify-content-center" :class="{ active: !card.isOpened }">
+        <img :src="getCardBack" class="img-fluid vh-image"/>
       </div>
     </div>
   </div>
@@ -18,7 +21,12 @@
 
   import mutations from '../../store/mutation-types';
   import getters from '../../store/getters';
+
   const cardTransitionTime = 500;
+  const openCardSound = '/static/media/select.mp3';
+  const closeCardSound = '/static/media/move.mp3';
+  const matchCardSound = '/static/media/match.mp3';
+
   export default {
     name: 'mt-card',
     props: {
@@ -26,15 +34,19 @@
     },
     computed: {
       getCardFront() {
-        const image = '/static/images/card_front.png';
+        const image = '/static/img/card_front.png';
         return image;
       },
       getImage() {
-        const image = '/static/images/' + this.card.image;
+        const image = '/static/img/' + this.card.image;
         return image;
       },
       getCardBack() {
-        const image = '/static/images/card_back.png';
+        const image = '/static/img/card_back.png';
+        return image;
+      },
+      getDisabledOverlay(){
+        const image = '/static/img/card_disabled_overlay.png';
         return image;
       },
     },
@@ -45,14 +57,12 @@
     },
     methods: {
 
-
       closeOpenedCards(){
-        const view = this;
         setTimeout(() => {
 
-          const openedCards = getters.getOpenedCards(view.$store.state);
+          const openedCards = getters.getOpenedCards(this.$store.state);
           for (let i = 0; i < openedCards.length; i++) {
-            view.toggleOpenedCard(openedCards[i])
+            this.toggleOpenedCard(openedCards[i])
           }
         }, cardTransitionTime * 2);
 
@@ -62,6 +72,11 @@
         const newCard = Object.assign({}, card);
         newCard.isOpened = !card.isOpened;
         this.$store.commit(mutations.UPDATE_CARD, newCard);
+        if(newCard.isOpened){
+          this.playSound(openCardSound)
+        }else{
+          this.playSound(closeCardSound)
+        }
       },
 
       canOpenMore(){
@@ -76,8 +91,27 @@
         for (let i = 0; i < openedCards.length; i++) {
           this.markCardAsMatched(openedCards[i]);
         }
+        setTimeout(() => {
+          this.playSound(matchCardSound);
+        }, cardTransitionTime / 2);
+
+        this.checkGameFinished();
       },
 
+      checkGameFinished(){
+        const matchedCards = getters.getMatchedCards(this.$store.state);
+        if(matchedCards.length == this.$store.state.cards.length){
+          this.$store.commit(mutations.SET_GAME_FINISHED, true);
+          this.$store.commit(mutations.SET_PLAY_TIME, (new Date().getTime() - this.$store.state.startTime)/1000);
+        }
+      },
+
+      playSound (sound) {
+        if(sound) {
+          var audio = new Audio(sound);
+          audio.play();
+        }
+      },
       markCardAsMatched(card){
         const newCard = Object.assign({}, card);
         newCard.isMatched = true;
@@ -89,9 +123,8 @@
           return false
         }
 
-        const view = this;
         const canOpenMore = this.canOpenMore();
-        console.log(canOpenMore)
+
         if (!canOpenMore || this.card.isMatched) {
           return;
         }
@@ -99,20 +132,20 @@
         this.switching = true;
         setTimeout(() => {
 
-          view.toggleOpenedCard(this.card);
-          const openedCards = getters.getOpenedCards(view.$store.state);
-          console.log(openedCards.length)
+          this.toggleOpenedCard(this.card);
+          const openedCards = getters.getOpenedCards(this.$store.state);
           if (openedCards.length == 2) {
             if (openedCards[0].type == openedCards[1].type) {
-              console.log('matching')
-              view.setMatchedCards();
+              // Cards matching
+              this.setMatchedCards();
             } else {
-              console.log('not matching')
-              view.closeOpenedCards();
+              // Cards not matching
+              this.closeOpenedCards();
             }
+            this.$store.commit(mutations.SET_COUNT, this.$store.state.tryCount + 1);
           }
 
-          view.switching = false
+          this.switching = false
         }, cardTransitionTime / 2);
 
       },

@@ -3,7 +3,7 @@ $card-transition-time: 0.5s;
 .card-container {
   perspective: 600px;
   position: relative;
-
+  user-select: none;
   &.switched {
     .card-wrapper {
       animation: rotate $card-transition-time linear both;
@@ -64,15 +64,52 @@ h1, h2 {
   max-width: 350px;
 }
 
+.card-disabled-overlay {
+  opacity: 0;
+}
 .card-side {
   color: white;
+
+  &.matched {
+   .card-disabled-overlay {
+     opacity: 0.05;
+   }
+  }
+  img {
+    pointer-events: none;
+  }
 }
 
 .card-image {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  max-width: 100%;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 5%;
+  text-transform: uppercase;
+  font-size: calc(1vw + 1vh);
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.vh-image {
+}
+
+
+.result {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 3.5rem;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  line-height: 4.5rem;
+}
+.result-count {
+  color: #f9cd1e;
+}
+.result-time {
+  color: #ffffff;
+}
+.result-label {
+  color: #ffb7d4;
+  font-size: 1.25rem;
 }

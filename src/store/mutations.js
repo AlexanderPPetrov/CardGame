@@ -28,4 +28,14 @@ export default {
     const index = state.cards.findIndex(x => x.id == card.id);
     state.cards.splice(index, 1, card);
   },
+  [mutations.SET_GAME_FINISHED](state, gameFinished) {
+    state.gameFinished = gameFinished;
+  },
+  [mutations.SET_COUNT](state, count) {
+    state.tryCount = count;
+  },
+  [mutations.SET_PLAY_TIME](state, time) {
+    state.playTime = time;
+  },
+
 };

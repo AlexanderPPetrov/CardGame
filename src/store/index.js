@@ -7,7 +7,7 @@ import getters from './getters';
 Vue.use(Vuex);
 
 const state = {
-  cards: [
+  originalCards: [
     {
       id: 0,
       image: 'hat.png',
@@ -33,8 +33,13 @@ const state = {
       type: 'sweater',
     },
   ],
+  cards: [],
   isLoading: false,
+  gameFinished: false,
   matchedCards: [],
+  tryCount: 0,
+  startTime: new Date().getTime(),
+  playTime: new Date().getTime(),
 };
 
 const store = new Vuex.Store({
