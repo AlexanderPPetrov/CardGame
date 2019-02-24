@@ -86,11 +86,12 @@ h1, h2 {
 
 .card-title {
   position: absolute;
-  bottom: 5%;
+  bottom: 6%;
   text-transform: uppercase;
-  font-size: calc(1vw + 1vh);
-  letter-spacing: 4px;
+  font-size: calc(1.2vw + 1.2vh);
+  letter-spacing: 2px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 .vh-image {
 }
@@ -110,6 +111,6 @@ h1, h2 {
   color: #ffffff;
 }
 .result-label {
-  color: #ffb7d4;
-  font-size: 1.25rem;
+  color: #ffcbe0;
+  font-size: 1.5rem;
 }

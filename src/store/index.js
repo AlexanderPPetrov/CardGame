@@ -7,32 +7,75 @@ import getters from './getters';
 Vue.use(Vuex);
 
 const state = {
-  originalCards: [
+  cardsData: [
     {
-      id: 0,
-      image: 'hat.png',
-      title: 'Шапка',
-      type: 'hat',
+      level: [
+        {
+          id: 0,
+          image: 'hat.png',
+          title: 'Шапка',
+          type: 'hat',
+        },
+        {
+          id: 1,
+          image: 'boots.png',
+          title: 'Обувки',
+          type: 'boots',
+        },
+      ]
     },
     {
-      id: 1,
-      image: 'boots.png',
-      title: 'Обувки',
-      type: 'boots',
+      level: [
+        {
+          id: 0,
+          image: 'hat.png',
+          title: 'Шапка',
+          type: 'hat',
+        },
+        {
+          id: 1,
+          image: 'boots.png',
+          title: 'Обувки',
+          type: 'boots',
+        },
+        {
+          id: 2,
+          image: 'scarf.png',
+          title: 'Шал',
+          type: 'scarf',
+        },
+      ]
     },
     {
-      id: 2,
-      image: 'scarf.png',
-      title: 'Шал',
-      type: 'scarf',
-    },
-    {
-      id: 3,
-      image: 'sweater.png',
-      title: 'Пуловер',
-      type: 'sweater',
-    },
+      level: [
+        {
+          id: 0,
+          image: 'hat.png',
+          title: 'Шапка',
+          type: 'hat',
+        },
+        {
+          id: 1,
+          image: 'boots.png',
+          title: 'Обувки',
+          type: 'boots',
+        },
+        {
+          id: 2,
+          image: 'scarf.png',
+          title: 'Шал',
+          type: 'scarf',
+        },
+        {
+          id: 3,
+          image: 'sweater.png',
+          title: 'Пуловер',
+          type: 'sweater',
+        },
+      ]
+    }
   ],
+  currentLevel: 0,
   cards: [],
   isLoading: false,
   gameFinished: false,

@@ -34,8 +34,14 @@ export default {
   [mutations.SET_COUNT](state, count) {
     state.tryCount = count;
   },
+  [mutations.SET_START_TIME](state, time) {
+    state.startTime = time;
+  },
   [mutations.SET_PLAY_TIME](state, time) {
     state.playTime = time;
+  },
+  [mutations.SET_CURRENT_LEVEL](state, level) {
+    state.currentLevel = level;
   },
 
 };

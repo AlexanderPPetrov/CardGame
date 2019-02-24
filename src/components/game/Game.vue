@@ -20,15 +20,13 @@
              ok-only
              hide-header-close
     >
-      <div class="d-flex justify-content-between">
-        <div class="w-50 d-flex align-items-center flex-column">
-          <div class="result result-count">{{getTryCount}}</div>
+      <div class="d-flex justify-content-between align-items-center">
           <div class="result-label">Брой опити</div>
-        </div>
-        <div class="w-50 d-flex align-items-center flex-column">
-          <div class="result result-time">{{ getPlayTime | moment("utc") |  moment("HH:mm:ss") }}</div>
-          <div class="result-label">Време</div>
-        </div>
+          <div class="result result-count">{{getTryCount}}</div>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="result-label">Време</div>
+        <div class="result result-time">{{ getPlayTime | moment("utc") |  moment("HH:mm:ss") }}</div>
       </div>
       <span slot="modal-ok" class="d-flex align-items-center">
           <i class="fa fa-play-circle btn-icon mr-3"></i>
@@ -45,8 +43,7 @@
 
   export default {
     created(){
-      this.$store.commit(mutations.SET_CARDS, this.$store.state.originalCards);
-
+      this.startGame();
     },
     computed: {
       cardResults() {
@@ -62,13 +59,23 @@
         return this.$store.state.playTime;
       }
     },
+
     methods: {
+      startGame(){
+        this.$store.commit(mutations.SET_START_TIME, new Date().getTime());
+        const currentLevel = this.$store.state.currentLevel;
+        const cards = this.$store.state.cardsData[currentLevel].level;
+        this.$store.commit(mutations.SET_CARDS, cards);
+      },
       newGame(){
         this.$store.commit(mutations.SET_GAME_FINISHED, false);
         setTimeout(() => {
-          this.$store.commit(mutations.SET_CARDS, this.$store.state.originalCards);
-          this.$store.commit(mutations.SET_COUNT, 0);
-          this.$store.commit(mutations.SET_PLAY_TIME, new Date().getTime());
+          let nextLevel = this.$store.state.currentLevel + 1;
+          if(nextLevel >= this.$store.state.cardsData.length -1){
+              nextLevel = this.$store.state.cardsData.length -1;
+          }
+          this.$store.commit(mutations.SET_CURRENT_LEVEL, nextLevel);
+          this.startGame();
         }, 250)
 
       }
