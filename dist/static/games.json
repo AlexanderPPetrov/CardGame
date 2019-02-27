@@ -4,8 +4,8 @@
   "games": [
     {
       "id": "1",
-      "title": 'Моите Дрехи',
-      "url": 'http://fourseasonsclothes.herokuapp.com'
+      "title": "Моите Дрехи",
+      "url": "http://fourseasonsclothes.herokuapp.com"
     }
   ]
 }
