@@ -96,21 +96,45 @@ h1, h2 {
 .vh-image {
 }
 
+.stats-container {
+  flex: 1;
+  + .stats-container {
+    border-left: 1px solid #4b5a6d;
+  }
+}
 
+.result-header {
+  color: #afc3d8;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
 .result {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 3.5rem;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-  line-height: 4.5rem;
-}
-.result-count {
-  color: #f9cd1e;
-}
-.result-time {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  padding-top: 0.2rem;
   color: #ffffff;
 }
+
+.icon-clock {
+  color: #11e2e4;
+  font-size: 2.5rem;
+}
+
+.icon-star {
+  color: #ffcc1b;
+  font-size: 2.5rem;
+}
+.icon-level {
+  color: #ff6c87;
+  font-size: 2.5rem;
+}
+
+
 .result-label {
-  color: #ffcbe0;
-  font-size: 1.5rem;
+  color: #afc3d8;
+  text-transform: uppercase;
+  margin-top: 0.35rem;
+  font-size: 1.25rem;
 }

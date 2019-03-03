@@ -12,14 +12,14 @@ const state = {
       level: [
         {
           id: 0,
-          image: 'hat_02.png',
+          image: 'hat.png',
           title: 'Шапка',
           type: 'hat',
         },
         {
           id: 1,
-          image: 'boots_02.png',
-          title: 'Ботуш',
+          image: 'boots.png',
+          title: 'Ботуши',
           type: 'boots',
         },
       ]
@@ -28,21 +28,21 @@ const state = {
       level: [
         {
           id: 0,
-          image: 'hat_02.png',
+          image: 'hat.png',
           title: 'Шапка',
           type: 'hat',
         },
         {
           id: 1,
-          image: 'boots_02.png',
-          title: 'Ботуш',
+          image: 'boots.png',
+          title: 'Ботуши',
           type: 'boots',
         },
         {
           id: 2,
-          image: 'scarf_02.png',
-          title: 'Шал',
-          type: 'scarf',
+          image: 'gloves.png',
+          title: 'Ръкавици',
+          type: 'gloves',
         },
       ]
     },
@@ -50,26 +50,26 @@ const state = {
       level: [
         {
           id: 0,
-          image: 'hat_02.png',
+          image: 'hat.png',
           title: 'Шапка',
           type: 'hat',
         },
         {
           id: 1,
-          image: 'boots_02.png',
+          image: 'boots.png',
           title: 'Обувки',
           type: 'boots',
         },
         {
           id: 2,
-          image: 'scarf_02.png',
-          title: 'Шал',
-          type: 'scarf',
+          image: 'gloves.png',
+          title: 'Ръкавици',
+          type: 'gloves',
         },
         {
           id: 3,
-          image: 'jacket_02.png',
-          title: 'Яке',
+          image: 'sweater.png',
+          title: 'Пуловер',
           type: 'sweater',
         },
       ]
