@@ -4,14 +4,11 @@
 .modal-footer {
   justify-content: center;
   padding: 0;
-  padding-bottom: 2rem;
+  border-top-color: transparent;
 }
 .modal-title {
   font-size: 1.5rem;
   color: #afc3d8;
-}
-.modal-backdrop {
-
 }
 
 .modal-content {
@@ -42,9 +39,5 @@
 }
 .modal-content {
   border-radius: 0.6rem;
-  background-color: #5d718a;
-}
-
-.modal-footer {
-  border-top-color: transparent;
+  background-color: #2f3c4c;
 }

@@ -20,42 +20,45 @@
              ok-only
              hide-header-close
     >
-      <div class="result-header mt-5">
-        Твоят резултат
-      </div>
-      <div class="d-flex w-100 my-5">
-        <div class="stats-container align-items-center justify-content-center text-center d-flex flex-column">
-          <div class="d-flex align-items-center">
-            <i class="fas fa-star icon-star mr-3"></i>
-            <span class="result">
+      <div class="h-100 d-flex justify-content-center flex-column">
+        <div class="result-header">Твоят резултат</div>
+        <div class="d-flex w-100 my-5">
+          <div class="stats-container align-items-center justify-content-center text-center d-flex flex-column">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-star icon-star mr-3"></i>
+              <span class="result">
               {{getTryCount}}
             </span>
+            </div>
+            <div class="result-label">Опити</div>
           </div>
-          <div class="result-label">Опити</div>
-        </div>
-        <div class="stats-container align-items-center justify-content-center text-center d-flex flex-column">
-          <div class="d-flex align-items-center">
-            <i class="fas fa-stopwatch icon-clock mr-3"></i>
-            <span class="result">
+          <div class="stats-container align-items-center justify-content-center text-center d-flex flex-column">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-stopwatch icon-clock mr-3"></i>
+              <span class="result">
               {{ getPlayTime | moment("utc") |  moment("HH:mm:ss") }}
             </span>
+            </div>
+            <div class="result-label">Време</div>
           </div>
-          <div class="result-label">Време</div>
-        </div>
-        <div class="stats-container align-items-center justify-content-center text-center d-flex flex-column">
-          <div class="d-flex align-items-center">
-            <i class="fas fa-gamepad icon-level mr-3"></i>
-            <span class="result">
+          <div class="stats-container align-items-center justify-content-center text-center d-flex flex-column">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-gamepad icon-level mr-3"></i>
+              <span class="result">
               {{ getCurrentLevel }}
             </span>
+            </div>
+            <div class="result-label">Трудност</div>
           </div>
-          <div class="result-label">Трудност</div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <b-button variant="info" size="lg" class="d-flex align-items-center">
+            <i class="fa fa-play-circle btn-icon mr-3"></i>
+            <span>НОВА ИГРА</span>
+          </b-button>
         </div>
       </div>
-      <span slot="modal-ok" class="d-flex align-items-center">
-          <i class="fa fa-play-circle btn-icon mr-3"></i>
-          <span>НОВА ИГРА</span>
-      </span>
+      <div slot="modal-footer"></div>
     </b-modal>
   </div>
 
