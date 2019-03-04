@@ -52,7 +52,7 @@
           </div>
         </div>
         <div class="d-flex justify-content-center">
-          <b-button variant="info" size="lg" class="d-flex align-items-center">
+          <b-button v-on:click="newGame" variant="info" size="lg" class="d-flex align-items-center">
             <i class="fa fa-play-circle btn-icon mr-3"></i>
             <span>НОВА ИГРА</span>
           </b-button>
