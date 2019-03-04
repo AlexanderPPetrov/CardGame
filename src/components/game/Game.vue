@@ -72,7 +72,7 @@
           <div class="after"></div>
         </div>
         <div class="congrats-container d-flex justify-content-center align-items-center flex-column">
-          <img :src="getBravo" class="bravo-image" :class="{ shake: showCongrats }"/>
+          <img :src="getBravo" class="bravo-image heartbeat"/>
         </div>
       </div>
 
@@ -94,7 +94,7 @@
       setTimeout(() => {
         this.isLoaded = true;
         this.startGame();
-      }, 2000);
+      }, 1000);
     },
     computed: {
       cardResults() {

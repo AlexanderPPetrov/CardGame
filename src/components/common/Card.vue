@@ -26,7 +26,9 @@
   const cardTransitionTime = 500;
   const openCardSound = '/static/media/select.mp3';
   const closeCardSound = '/static/media/move.mp3';
-  const matchCardSound = '/static/media/match.mp3';
+  const notMatchingCardSound = '/static/media/notmatching.mp3';
+  const matchCardSound = '/static/media/matching.mp3';
+  const levelSound = '/static/media/level.mp3';
 
   export default {
     name: 'mt-card',
@@ -69,6 +71,7 @@
           for (let i = 0; i < openedCards.length; i++) {
             this.toggleOpenedCard(openedCards[i])
           }
+          this.playSound(notMatchingCardSound);
         }, cardTransitionTime * 2);
 
       },
@@ -107,6 +110,7 @@
         const matchedCards = getters.getMatchedCards(this.$store.state);
         if(matchedCards.length == this.$store.state.cards.length){
           setTimeout(() => {
+            this.playSound(levelSound);
             this.$store.commit(mutations.SET_SHOW_CONGRATS, true);
           }, 2000);
           setTimeout(() => {
