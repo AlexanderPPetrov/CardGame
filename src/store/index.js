@@ -83,6 +83,7 @@ const state = {
   tryCount: 0,
   startTime: new Date().getTime(),
   playTime: new Date().getTime(),
+  showCongrats: false
 };
 
 const store = new Vuex.Store({

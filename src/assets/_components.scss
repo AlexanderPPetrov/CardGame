@@ -137,3 +137,133 @@ h1, h2 {
   margin-top: 0.35rem;
   font-size: 1.25rem;
 }
+
+.congrats-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color:rgba(34, 214, 255, 0.2);
+  .bravo-image {
+    width: 70%;
+  }
+
+}
+
+.star-image {
+  width: 40%;
+  position: absolute;
+  left: 30%;
+  top: -10%;
+}
+.pyro {
+  position: absolute;
+  &.pyro-1 {
+    left: 20%;
+    top: 50%;
+  }
+  &.pyro-2 {
+    right: 25%;
+    top: 30%;
+  }
+}
+
+
+@-webkit-keyframes spaceboots {
+  0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+  10% { -webkit-transform: translate(-1px, -2px) rotate(-2deg); }
+  20% { -webkit-transform: translate(-3px, 0px) rotate(2deg); }
+  30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+  40% { -webkit-transform: translate(1px, -1px) rotate(2deg); }
+  50% { -webkit-transform: translate(-1px, 2px) rotate(-2deg); }
+  60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+  74% { -webkit-transform: translate(2px, 1px) rotate(-2deg); }
+  80% { -webkit-transform: translate(-1px, -1px) rotate(2deg); }
+  90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+  100% { -webkit-transform: translate(1px, -2px) rotate(-2deg); }
+}
+
+.shake {
+  -webkit-animation-name: spaceboots;
+  -webkit-animation-duration: 0.8s;
+  -webkit-transform-origin: 50% 50%;
+}
+
+.rotateScaleUp {
+  animation: rotate-scale-up 0.65s linear both;
+}
+
+@keyframes rotate-scale-up {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(1.5) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+.puffOutCenter {
+  animation: puff-out-center 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+
+@keyframes puff-out-center {
+  0% {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    filter: blur(2px);
+    opacity: 0;
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out 2 both;
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+.game-content {
+  opacity: 0;
+}
+.fadeIn {
+  animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@keyframes fade-in-bck {
+  0% {
+    transform: translateZ(80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}

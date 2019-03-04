@@ -43,5 +43,7 @@ export default {
   [mutations.SET_CURRENT_LEVEL](state, level) {
     state.currentLevel = level;
   },
-
+  [mutations.SET_SHOW_CONGRATS](state, isMatched) {
+    state.showCongrats = isMatched;
+  },
 };

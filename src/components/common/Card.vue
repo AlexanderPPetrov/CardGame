@@ -3,11 +3,12 @@
        :class="{ switched: !card.isOpened }">
     <div class="card-wrapper">
       <div class="card-side d-flex align-items-center justify-content-center"
-           :class="{ active: card.isOpened, matched: card.isMatched }">
+           :class="{ active: card.isOpened, matched: card.isMatched, heartbeat: card.isMatched }">
         <img :src="getCardFront" class="img-fluid vh-image"/>
         <img :src="getDisabledOverlay" class="card-image vh-image img-fluid card-disabled-overlay"/>
         <img :src="getImage" class="card-image img-fluid vh-image card-asset"/>
         <span class="card-title">{{card.title}}</span>
+        <img :src="getStar" v-if="card.isMatched" class="star-image rotateScaleUp"/>
       </div>
       <div class="card-side card-side-back d-flex align-items-center justify-content-center" :class="{ active: !card.isOpened }">
         <img :src="getCardBack" class="img-fluid vh-image"/>
@@ -47,6 +48,10 @@
       },
       getDisabledOverlay(){
         const image = '/static/img/card_disabled_overlay.png';
+        return image;
+      },
+      getStar(){
+        const image = '/static/img/star.png';
         return image;
       },
     },
@@ -101,8 +106,15 @@
       checkGameFinished(){
         const matchedCards = getters.getMatchedCards(this.$store.state);
         if(matchedCards.length == this.$store.state.cards.length){
-          this.$store.commit(mutations.SET_GAME_FINISHED, true);
-          this.$store.commit(mutations.SET_PLAY_TIME, (new Date().getTime() - this.$store.state.startTime)/1000);
+          setTimeout(() => {
+            this.$store.commit(mutations.SET_SHOW_CONGRATS, true);
+          }, 2000);
+          setTimeout(() => {
+            this.$store.commit(mutations.SET_GAME_FINISHED, true);
+            this.$store.commit(mutations.SET_SHOW_CONGRATS, false);
+            this.$store.commit(mutations.SET_PLAY_TIME, (new Date().getTime() - this.$store.state.startTime)/1000);
+          }, 6000);
+
         }
       },
 
