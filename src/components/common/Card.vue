@@ -8,7 +8,7 @@
         <img :src="getDisabledOverlay" class="card-image vh-image img-fluid card-disabled-overlay"/>
         <img :src="getImage" class="card-image img-fluid vh-image card-asset"/>
         <span class="card-title">{{card.title}}</span>
-        <img :src="getStar" v-if="card.isMatched" class="star-image rotateScaleUp"/>
+        <img :src="getStar" v-if="card.isMatched" class="star-image rotateScaleUp" :class="{puffOutCenter: card.starOut}"/>
       </div>
       <div class="card-side card-side-back d-flex align-items-center justify-content-center" :class="{ active: !card.isOpened }">
         <img :src="getCardBack" class="img-fluid vh-image"/>
@@ -59,7 +59,7 @@
     },
     data() {
       return {
-        switching: false,
+        switching: false
       };
     },
     methods: {
@@ -71,7 +71,7 @@
           for (let i = 0; i < openedCards.length; i++) {
             this.toggleOpenedCard(openedCards[i])
           }
-          this.playSound(notMatchingCardSound);
+//          this.playSound(notMatchingCardSound);
         }, cardTransitionTime * 2);
 
       },
@@ -132,6 +132,10 @@
         const newCard = Object.assign({}, card);
         newCard.isMatched = true;
         this.$store.commit(mutations.UPDATE_CARD, newCard);
+        setTimeout(() => {
+          newCard.starOut = true;
+          this.$store.commit(mutations.UPDATE_CARD, newCard);
+        }, 2000);
       },
 
       flipCard(){

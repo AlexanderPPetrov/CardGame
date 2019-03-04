@@ -9,11 +9,15 @@ export default {
     for (let i = 0; i < cards.length; i++) {
       cards[i].isMatched = false;
       cards[i].isOpened = false;
+      cards[i].starOut = false;
       const clonedCard = {
         id: cards.length + i,
         image: cards[i].image,
         title: cards[i].title,
         type: cards[i].type,
+        isMatched: cards[i].isMatched,
+        isOpened: cards[i].isOpened,
+        starOut: cards[i].starOut,
       };
       clonedCards.push(clonedCard);
     }

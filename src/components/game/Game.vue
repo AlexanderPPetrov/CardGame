@@ -124,6 +124,7 @@
     methods: {
       startGame(){
         this.$store.commit(mutations.SET_START_TIME, new Date().getTime());
+        this.$store.commit(mutations.SET_COUNT, 0);
         const currentLevel = this.$store.state.currentLevel;
         const cards = this.$store.state.cardsData[currentLevel].level;
         this.$store.commit(mutations.SET_CARDS, cards);
