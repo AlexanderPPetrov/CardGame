@@ -88,10 +88,15 @@ h1, h2 {
   position: absolute;
   bottom: 6%;
   text-transform: uppercase;
-  font-size: calc(1.2vw + 1.2vh);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   font-weight: bold;
+  font-size: 1.25rem;
+}
+.webview {
+  .card-title {
+    font-size: calc(1.2vw + 1.2vh);
+  }
 }
 .vh-image {
 }
@@ -146,11 +151,16 @@ h1, h2 {
   left: 0;
   background-color:rgba(34, 214, 255, 0.2);
   .bravo-image {
-    width: 70%;
+    width: 600px;
   }
 
 }
 
+.webview {
+  .bravo-image {
+    width: 70%;
+  }
+}
 .star-image {
   width: 40%;
   position: absolute;

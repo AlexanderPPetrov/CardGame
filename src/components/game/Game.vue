@@ -1,6 +1,6 @@
 <template>
-  <div class="h-100 game-content" :class="{ fadeIn: isLoaded }">
-    <div class="container h-100 align-items-center justify-content-center d-flex">
+  <div class="h-100 game-content d-flex align-items-center" :class="{ fadeIn: isLoaded }">
+    <div class="container align-items-center justify-content-center d-flex main-container">
       <div class="row">
         <mt-card v-if="cardResults.length"
                  v-for="(card) in cardResults"
