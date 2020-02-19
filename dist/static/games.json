@@ -1,13 +1,21 @@
 {
     "title": "Games List",
     "description": "Educational games list",
-    "games": [
-        {
-            "id": "1",
-            "title": "Моите Дрехи",
-            "description": "Познавателна игра, в която трябва да откриеш двойките еднакви дрехи",
-            "url": "http://fourseasonsclothes.herokuapp.com",
-            "image": "https://res.cloudinary.com/mateassets/image/upload/v1582006722/GameLibrary/clothes_game_icon.jpg"
-        }
-    ]
+    "games": {
+        "beginner": [
+            {
+                "id": "1",
+                "title": "Моите Дрехи",
+                "description": "Познавателна игра, в която трябва да откриеш двойките еднакви дрехи",
+                "url": "http://fourseasonsclothes.herokuapp.com",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1582006722/GameLibrary/clothes_game_icon.jpg"
+            }
+        ],
+        "advanced": [
+
+        ],
+        "experienced": [
+
+        ]
+    }
 }
