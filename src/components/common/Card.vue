@@ -153,7 +153,7 @@
                 }
 
                 this.switching = true;
-                setTimeout(() => {
+                // setTimeout(() => {
 
                     this.toggleOpenedCard(this.card);
                     const openedCards = getters.getOpenedCards(this.$store.state);
@@ -169,7 +169,7 @@
                     }
 
                     this.switching = false
-                }, cardTransitionTime / 2);
+                // }, cardTransitionTime / 2);
 
             },
         },
