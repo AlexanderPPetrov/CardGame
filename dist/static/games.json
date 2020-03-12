@@ -15,7 +15,13 @@
 
         ],
         "experienced": [
-
+            {
+                "id": "2",
+                "title": "Думаница",
+                "description": "Познавателна игра, в която трябва да отгатнеш думата по нейни синоними",
+                "url": "http://dumanica-web.herokuapp.com",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1584045226/GameLibrary/dumanica.png"
+            }
         ]
     }
 }
