@@ -40,7 +40,7 @@
         },
         computed: {
             getCardFront() {
-                const image = '/static/img/card_front.png';
+                const image = '/static/img/card_front_animals.png';
                 return image;
             },
             getImage() {
@@ -48,7 +48,7 @@
                 return image;
             },
             getCardBack() {
-                const image = '/static/img/card_back.png';
+                const image = '/static/img/card_back_animals.png';
                 return image;
             },
             getDisabledOverlay() {
