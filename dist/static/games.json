@@ -4,6 +4,13 @@
     "games": {
         "beginner": [
             {
+                "id": "0",
+                "Title": "Растителни и животински храни",
+                "description": "Разпознай и групирай растителни и животински храни",
+                "url": "https://learningapps.org/tools/86/27/watch?id=pwfbxa8ga20&allowFullscreen=1",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1582006722/GameLibrary/clothes_game_icon.jpg"
+            },
+            {
                 "id": "1",
                 "title": "Моите Дрехи",
                 "description": "Познавателна игра, в която трябва да откриеш двойките еднакви дрехи",
@@ -20,7 +27,7 @@
         ],
         "advanced": [
             {
-                "id": "3",
+                "id": "2",
                 "title": "Думаница",
                 "description": "Познавателна игра, в която трябва да отгатнеш думата по нейни синоними",
                 "url": "http://dumanica-web.herokuapp.com/",
@@ -29,7 +36,7 @@
         ],
         "experienced": [
             {
-                "id": "4",
+                "id": "2",
                 "title": "Моето селище",
                 "description": "Чрез тази игра детето се учи се да разпознава и запомня символи на сгради характерни за всяко селище, представени чрез картинка и дума. Запомнянето става непреднамерено в хода на играта и при многократното й повторение",
                 "url": "http://trafficrules.herokuapp.com/",
