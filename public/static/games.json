@@ -60,22 +60,15 @@
                 "description": "Познавателна игра, в която трябва да отнесеш животните към съответните групи",
                 "url": "https://learningapps.org/watch?v=ppivfg41t21&allowFullscreen=1",
                 "image": "https://res.cloudinary.com/mateassets/image/upload/v1612818676/GameLibrary/animal_groups_icon.jpg"
-            },
+            }
+        ],
+        "experienced": [
             {
                 "id": "8",
                 "title": "Думаница",
                 "description": "Познавателна игра, в която трябва да отгатнеш думата по нейни синоними",
                 "url": "http://dumanica-web.herokuapp.com/",
                 "image": "https://res.cloudinary.com/mateassets/image/upload/v1584045226/GameLibrary/dumanica.png"
-            }
-        ],
-        "experienced": [
-            {
-                "id": "9",
-                "title": "Моето селище",
-                "description": "Чрез тази игра детето се учи се да разпознава и запомня символи на сгради характерни за всяко селище, представени чрез картинка и дума. Запомнянето става непреднамерено в хода на играта и при многократното й повторение",
-                "url": "http://trafficrules.herokuapp.com/",
-                "image": "https://res.cloudinary.com/mateassets/image/upload/v1588579066/GameLibrary/village.png"
             }
         ]
     }
