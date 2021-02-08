@@ -69,6 +69,13 @@
                 "description": "Познавателна игра, в която трябва да отгатнеш думата по нейни синоними",
                 "url": "http://dumanica-web.herokuapp.com/",
                 "image": "https://res.cloudinary.com/mateassets/image/upload/v1584045226/GameLibrary/dumanica.png"
+            },
+            {
+                "id": "9",
+                "title": "Моето селище",
+                "description": "Чрез тази игра детето се учи се да разпознава и запомня символи на сгради характерни за всяко селище, представени чрез картинка и дума.",
+                "url": "http://trafficrules.herokuapp.com/",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1588579066/GameLibrary/village.png"
             }
         ]
     }
