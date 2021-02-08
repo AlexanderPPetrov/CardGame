@@ -1,17 +1,15 @@
 <template>
     <div class="h-100 game-content d-flex align-items-center" :class="{ fadeIn: isLoaded }">
         <div class="align-items-center justify-content-center d-flex main-container flex-column">
-            <div class="row align-items-center justify-content-center">
-                <mt-card v-if="cardResults.length"
-                         v-for="(card) in cardResultsFirst"
+            <div v-if="cardResults.length" class="row align-items-center justify-content-center">
+                <mt-card v-for="(card) in cardResultsFirst"
                          :key="card.id"
                          :card="card"
                          :displayCardTitle="displayCardTitle"
                 ></mt-card>
             </div>
-            <div class="row align-items-center justify-content-center">
-                <mt-card v-if="cardResults.length"
-                         v-for="(card) in cardResultsSecond"
+            <div v-if="cardResults.length" class="row align-items-center justify-content-center">
+                <mt-card v-for="(card) in cardResultsSecond"
                          :key="card.id"
                          :card="card"
                          :displayCardTitle="displayCardTitle"
