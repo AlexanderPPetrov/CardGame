@@ -1,0 +1,47 @@
+{
+    "title": "Games List",
+    "description": "Educational games list",
+    "games": {
+        "beginner": [
+            {
+                "id": "0",
+                "Title": "Растителни и животински храни",
+                "description": "Разпознай и групирай растителни и животински храни",
+                "url": "https://learningapps.org/tools/86/27/watch?id=pwfbxa8ga20&allowFullscreen=1",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1582006722/GameLibrary/clothes_game_icon.jpg"
+            },
+            {
+                "id": "1",
+                "title": "Моите Дрехи",
+                "description": "Познавателна игра, в която трябва да откриеш двойките еднакви дрехи",
+                "url": "http://fourseasonsclothes.herokuapp.com",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1582006722/GameLibrary/clothes_game_icon.jpg"
+            },
+            {
+                "id": "2",
+                "title": "Животните около нас",
+                "description": "Познавателна игра, в която трябва да откриеш двойките еднакви животни",
+                "url": "https://animalsaroundus.herokuapp.com/",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1588576913/GameLibrary/animals.png"
+            }
+        ],
+        "advanced": [
+            {
+                "id": "2",
+                "title": "Думаница",
+                "description": "Познавателна игра, в която трябва да отгатнеш думата по нейни синоними",
+                "url": "http://dumanica-web.herokuapp.com/",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1584045226/GameLibrary/dumanica.png"
+            }
+        ],
+        "experienced": [
+            {
+                "id": "2",
+                "title": "Моето селище",
+                "description": "Чрез тази игра детето се учи се да разпознава и запомня символи на сгради характерни за всяко селище, представени чрез картинка и дума. Запомнянето става непреднамерено в хода на играта и при многократното й повторение",
+                "url": "http://trafficrules.herokuapp.com/",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1588579066/GameLibrary/village.png"
+            }
+        ]
+    }
+}
