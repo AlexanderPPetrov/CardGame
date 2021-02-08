@@ -5,20 +5,34 @@
         "beginner": [
             {
                 "id": "0",
-                "Title": "Растителни и животински храни",
+                "title": "Растителни и животински храни",
                 "description": "Разпознай и групирай растителни и животински храни",
                 "url": "https://learningapps.org/tools/86/27/watch?id=pwfbxa8ga20&allowFullscreen=1",
-                "image": "https://res.cloudinary.com/mateassets/image/upload/v1582006722/GameLibrary/clothes_game_icon.jpg"
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1612816611/GameLibrary/food_icon.jpg"
             },
             {
                 "id": "1",
+                "title": "Диви и домашни животни",
+                "description": "Разпознай и групирай диви и домашни животни",
+                "url": "https://learningapps.org/watch?v=pw4amwy0n21&allowFullscreen=1",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1612816611/GameLibrary/food_icon.jpg"
+            },
+            {
+                "id": "2",
+                "title": "Планетите от Слънчевата система",
+                "description": "Познавателна игра, в която трябва да разпознаеш планетите от Слънчевата система",
+                "url": "https://learningapps.org/watch?v=pxt533wdk20&allowFullscreen=1",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1582006722/GameLibrary/clothes_game_icon.jpg"
+            },
+            {
+                "id": "3",
                 "title": "Моите Дрехи",
                 "description": "Познавателна игра, в която трябва да откриеш двойките еднакви дрехи",
                 "url": "http://fourseasonsclothes.herokuapp.com",
                 "image": "https://res.cloudinary.com/mateassets/image/upload/v1582006722/GameLibrary/clothes_game_icon.jpg"
             },
             {
-                "id": "2",
+                "id": "4",
                 "title": "Животните около нас",
                 "description": "Познавателна игра, в която трябва да откриеш двойките еднакви животни",
                 "url": "https://animalsaroundus.herokuapp.com/",
@@ -27,7 +41,28 @@
         ],
         "advanced": [
             {
-                "id": "2",
+                "id": "5",
+                "title": "Хранителна верига",
+                "description": "Познавателна игра, в която трябва да подредиш последователно елементи на хранителна верига",
+                "url": "https://learningapps.org/watch?v=pxt533wdk20&allowFullscreen=1",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1584045226/GameLibrary/dumanica.png"
+            },
+            {
+                "id": "6",
+                "title": "Стани богат „Слънчева система“",
+                "description": "Докажи своите знания за Слънчевата система",
+                "url": "https://learningapps.org/watch?v=pmbkdpfnk20&allowFullscreen=1",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1584045226/GameLibrary/dumanica.png"
+            },
+            {
+                "id": "7",
+                "title": "Групи животни",
+                "description": "Познавателна игра, в която трябва да отнесеш животните към съответните групи",
+                "url": "https://learningapps.org/watch?v=ppivfg41t21&allowFullscreen=1",
+                "image": "https://res.cloudinary.com/mateassets/image/upload/v1584045226/GameLibrary/dumanica.png"
+            },
+            {
+                "id": "8",
                 "title": "Думаница",
                 "description": "Познавателна игра, в която трябва да отгатнеш думата по нейни синоними",
                 "url": "http://dumanica-web.herokuapp.com/",
@@ -36,7 +71,7 @@
         ],
         "experienced": [
             {
-                "id": "2",
+                "id": "9",
                 "title": "Моето селище",
                 "description": "Чрез тази игра детето се учи се да разпознава и запомня символи на сгради характерни за всяко селище, представени чрез картинка и дума. Запомнянето става непреднамерено в хода на играта и при многократното й повторение",
                 "url": "http://trafficrules.herokuapp.com/",
